@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using week1_test_git.ChainOfRespo;
 
 namespace week1_test_git
 {
@@ -39,8 +40,14 @@ namespace week1_test_git
 
         private static List<SpeseRimborsate> Determina(List<Spese> spese)
         {
-            //determina
-            return null;
+            //determina livello di approvazione 
+            List<SpeseRimborsate> speseElaborate = new();
+            IHandler manager = new ManagerHandler();
+            IHandler opManager = new OperationalManagerHandler();
+            IHandler ceo = new CeoHandler();
+            manager.SetNext(opManager).SetNext(ceo);
+            //non sono riuscito a farlo, o l'avrei fatto senza la chain of responsability
+            return speseElaborate;
         }
 
         private static void WriteFile(List<SpeseRimborsate> spese)

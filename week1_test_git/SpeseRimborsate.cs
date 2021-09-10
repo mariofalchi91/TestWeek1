@@ -15,7 +15,8 @@ namespace week1_test_git
     {
         Manager,
         OperationalManager,
-        CEO
+        CEO,
+        NonApprovata
     }
     public class SpeseRimborsate
     {
