@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using week1_test_git.ChainOfRespo;
+using week1_test_git.Importi;
 
 namespace week1_test_git
 {
@@ -46,7 +47,13 @@ namespace week1_test_git
             IHandler opManager = new OperationalManagerHandler();
             IHandler ceo = new CeoHandler();
             manager.SetNext(opManager).SetNext(ceo);
+
             //non sono riuscito a farlo, o l'avrei fatto senza la chain of responsability
+
+            //imposto il tipo di rimborso
+
+            ITipo tipo = null;
+
             return speseElaborate;
         }
 
